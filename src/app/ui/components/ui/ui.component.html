@@ -1,8 +1,13 @@
 <header class="fixed-top">
-  <ng-content select=".icon-nav"></ng-content>
+  <span (click)="toggle()" >
+    <ng-content select=".icon-nav" *ngIf="!open else close"></ng-content>
+    <ng-template #close>
+        <ng-content select=".icon-close"></ng-content>
+    </ng-template>
+  </span>
   <ng-content select=".header"></ng-content>
 </header>
-<main>
+<main [ngClass]="{'close-aside': !open}">
  <div class="shadow position-fixed">
  </div>
  <aside>
