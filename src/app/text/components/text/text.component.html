@@ -1,4 +1,4 @@
-<div [ngClass]="{'color-light': colorLight}">
+<div [ngClass]="{'color-light': color === 'color-light', 'color1': color === 'color1', 'color2': color === 'color2', 'color3': color === 'color3'}">
   <ng-content></ng-content>
 </div>
 

@@ -18,6 +18,21 @@ app-text {
       color: $light-color;
     }
   }
+  .color1 {
+    h1, h2, h3, p, span, i, li {
+      color: $color1;
+    }
+  }
+  .color2 {
+    h1, h2, h3, p, span, i, li {
+      color: $color2;
+    }
+  }
+  .color3 {
+    h1, h2, h3, p, span, i, li {
+      color: $color3;
+    }
+  }
 }
 
 // .pages {

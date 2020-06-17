@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class TextComponent implements OnInit {
-  @Input() colorLight: boolean;
+  @Input() color: string;
   constructor() { }
 
   ngOnInit(): void {
