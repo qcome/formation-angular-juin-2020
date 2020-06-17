@@ -3,8 +3,7 @@
 
 a, button {
   border: none;
-  margin-left: 10px;
-  color: $light-color;
+  margin-right: 10px;
   display: inline-block;
   padding: 1em;
   font-size: $regular-fz;
@@ -15,19 +14,3 @@ a, button {
     background: darken($color1, 10);
   }
 }
-// :host-context(.bg-color-two) {
-//   a, button {
-//     background: $color2;
-//     &:hover {
-//       background: darken($color2, 10);
-//     }
-//   }
-// }
-// :host-context(.bg-color-three) {
-//   a, button {
-//     background: $color3;
-//     &:hover {
-//       background: darken($color3, 10);
-//     }
-//   }
-// }

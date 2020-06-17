@@ -1,8 +1,17 @@
-# use app text
+# text in button
 
-<app-text class ="text"></app-text> to benefits scss on typo elements
+user @Input() label: string
 
-# manage colors
+# links
+
+user @Input() route: string if redirect to internal route
+user @Input() href: string if redirect to external route
+
+# action
+
+user @Input() action: string if create a button action
+
+# text color in button
 
 use @Input() color; string to change default color
 default: $dark-color
@@ -12,7 +21,3 @@ if @Input() color = 'color2' = $color2
 if @Input() color = 'color3' = $color3
 if @Input() color = 'color-error' = $color-error
 if @Input() color = 'color-success' = $color-success
-
-# directive
-
-user directive ColorDirective to generate dynamically
