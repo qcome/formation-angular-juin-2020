@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TextModule } from '../text/text.module';
+import { LibraryModule } from '../library/library.module';
 
 
 
@@ -12,6 +13,7 @@ import { TextModule } from '../text/text.module';
   imports: [
     CommonModule,
     TextModule,
+    LibraryModule
   ],
   exports: [HeaderComponent, NavComponent, FooterComponent]
 })

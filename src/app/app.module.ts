@@ -17,7 +17,6 @@ import { UiModule } from './ui/ui.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     LoginModule,
     CoreModule,
     IconsModule,
@@ -25,6 +24,7 @@ import { UiModule } from './ui/ui.module';
     UiModule,
     TemplatesModule,
     NgbModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
