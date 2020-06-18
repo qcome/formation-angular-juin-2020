@@ -1,16 +1,24 @@
 @import 'theme';
 @import 'fonts';
-
 a, button {
   border: none;
   margin-right: 10px;
   display: inline-block;
   padding: 1em;
   font-size: $regular-fz;
-  background: $color1;
   transition: all .5s;
   &:hover {
     text-decoration: none;
     background: darken($color1, 10);
   }
+}
+// colors
+a, button {
+  background: $color1;
+}
+// :host {
+//   margin: 50px;
+// }
+:host-context(.bg-color2) a, :host-context(.bg-color2) button {
+  background: $color2;
 }

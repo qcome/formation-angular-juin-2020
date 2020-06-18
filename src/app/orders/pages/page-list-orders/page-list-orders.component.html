@@ -1,4 +1,4 @@
-<app-template-one-col [title]="true">
+<app-template-one-col [title]="true" [bgColor2]="false">
 
   <ng-container class="title">
     <app-text class="text" color="color-light">
@@ -7,7 +7,7 @@
   </ng-container>
 
   <ng-container class="contents">
-    <app-table-light *ngIf="collection$ | async as collection" [headers]="headers" [collection]="collection">
+    <app-table-dark *ngIf="collection$ | async as collection" [headers]="headers" >
       <tr *ngFor="let item of collection">
         <td>{{ item.typePresta }}</td>
         <td>{{ item.client }}</td>
@@ -15,16 +15,16 @@
         <td>{{ item.tjmHt | currency: 'EUR' }}</td>
         <td>{{ item | total | currency: 'EUR' }}</td>
         <td>{{ item | total: true | currency: 'EUR' }}</td>
-        <td>
+        <td [appState]="item.state">
           <select (change)="changeState(item, $event)">
             <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
           </select>
         </td>
       </tr>
-    </app-table-light>
+    </app-table-dark>
     <app-btn label="Add an Order" route="add" color="color-light"></app-btn>
     <app-btn label="Angular" href="https://www.angular.io" color="color2"></app-btn>
-    <app-btn label="Popup" [action]="true" color="color3"></app-btn>
+    <app-btn label="Popup" [action]="true" (clicked)="popup()" color="color3"></app-btn>
   </ng-container>
 
 </app-template-one-col>

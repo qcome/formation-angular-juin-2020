@@ -40,4 +40,8 @@ export class PageListOrdersComponent implements OnInit {
     });
   }
 
+  public popup() {
+    console.log('popup active');
+  }
+
 }
