@@ -7,3 +7,14 @@
 ✔ TextModule @done(20-06-15 14:17)
 ✔ UiModule @done(20-06-15 14:17)
 ✔ TemplatesModule @done(20-06-15 14:17)
+
+✔ enum client (ACTIVE, INACTIVE) @done(20-06-18 16:02)
+✔ interface ClientI (voir db) @done(20-06-18 16:08)
+✔ model Client @done(20-06-18 16:08)
+✔ service ClientService @done(20-06-18 16:13)
+☐ PageListClientComponent
+  ☐ template-one-col avec bgColor2
+  ☐ table-light ou table-dark (name, tva, ca(total ca ht), tva, ca ttc, state)
+  ☐ item.ca (ca total ht) afficher une colone CA TTC à l'aide d'un nouveau Pipe qui return ca + tva
+  ☐ utiliser la meme directive pour le bg des td states
+  ☐ state-active, state-inactive (2 noms de class que vous devez ajouter dans table-light.scss et table-dark.scss)

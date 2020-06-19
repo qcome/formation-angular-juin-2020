@@ -32,11 +32,17 @@ export class OrdersService {
     obj.state = state;
     return this.update(obj);
   }
+
   //add item in collection
+  public add(item: Order): Observable<Order>{
+    return this.http.post<Order>(`${this.urlApi}orders`, item);
+  }
+
   //update item in collection
   public update(item: Order): Observable<Order>{
     return this.http.put<Order>(`${this.urlApi}orders/${item.id}`, item);
   }
+
   //delete item in collection
   //get by id item in collection
 }
