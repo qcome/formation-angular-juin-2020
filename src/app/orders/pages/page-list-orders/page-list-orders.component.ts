@@ -3,6 +3,7 @@ import { OrdersService } from '../../services/orders.service';
 import { Order } from 'src/app/shared/models/order';
 import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-list-orders',
@@ -14,7 +15,10 @@ export class PageListOrdersComponent implements OnInit {
   public collection$: Observable<Order[]>;
   public headers: string[];
   public states = Object.values(StateOrder);
-  constructor(private os: OrdersService) { }
+  constructor(
+    private os: OrdersService,
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
     this.collection$ = this.os.collection
@@ -38,6 +42,12 @@ export class PageListOrdersComponent implements OnInit {
     this.os.changeState(item, e.target.value).subscribe((res) => {
       item.state = res.state;
     });
+  }
+
+  public edit(item: Order) {
+    console.log("clicked");
+    console.log(item);
+    this.router.navigate(['orders', 'edit', item.id]);
   }
 
   public popup() {
